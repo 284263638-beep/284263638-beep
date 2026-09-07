@@ -1,0 +1,165 @@
+.hero-ui{mix-blend-mode:normal!important}
+.hero-tags,.hero-title,.hero-profile,.hero-watch small,.hero-work{mix-blend-mode:difference}
+.hero-meta span,.hero-profile em,.hero-watch-label{mix-blend-mode:normal!important;background:#fff!important;color:#090909!important;box-shadow:0 .35vw 1.15vw rgba(0,0,0,.24)}
+.hero-meta span{padding:.85vw 1.8vw}
+.hero-profile em{font-weight:500}
+.hero-watch-label{padding:1.05vw 1.45vw;border-radius:3vw;min-width:11.8vw;text-align:center;font-size:1.16vw}
+.hero-watch small{margin-top:1.35vw}
+.hero-person,.reveal-window img{object-fit:contain!important;object-position:center center!important}
+.hero-screen.reveal-blocked .reveal-window{opacity:1!important}
+.about-screen .image-card{height:auto!important;aspect-ratio:1;border-radius:.28vw!important}
+.case-image{border-radius:1.25vw;overflow:hidden}
+.finish-screen{position:relative;background:#030303;overflow:hidden}.finish-nav{position:absolute;z-index:5;left:3.7%;right:3.7%;top:6%;font-size:1vw;color:#ddd}.finish-nav span{float:right}.finish-screen .giant-replace{z-index:1;left:4.2%;top:25%;width:91.5%;height:30%;background:transparent;color:#777;font-size:10.6vw}.finish-person-clean{position:absolute;z-index:2;left:34%;top:9%;width:32%;height:84%;object-fit:cover;object-position:center 50%;mix-blend-mode:screen}.finish-screen .ending-copy{z-index:4;background:transparent;left:5.2%;top:60%;width:24%;padding:0}.finish-card{position:absolute;z-index:4;right:5.2%;bottom:7%;width:21%;height:25%;border-radius:1.1vw;background:#4d4d4d}.finish-screen .top{z-index:8}
+.finish-person-clean{z-index:3!important;top:6%!important;mix-blend-mode:normal!important;clip-path:polygon(43% 15%,58% 16%,67% 36%,70% 100%,29% 100%,31% 38%)}
+.finish-screen .giant-replace{z-index:4!important}.finish-person-clean{clip-path:none!important;object-fit:contain!important;background:transparent}.finish-screen .ending-copy,.finish-card,.finish-nav{z-index:5!important}
+.final-artboard{--reveal-x:50%;--reveal-y:50%;cursor:none}.final-artboard .finish-base{width:100%!important;height:100%!important;object-fit:contain!important;object-position:center!important}.final-artboard .reveal-window img{object-fit:contain!important;object-position:center!important}.final-artboard.is-revealing .reveal-window,.final-artboard.is-revealing .square-cursor{opacity:1}.final-artboard .hotspot{z-index:12}
+.about-screen .about-copy,.about-screen .card-row{transform:translateY(2.5vw)}
+.about-screen .image-card{cursor:pointer;transform:scale(1);transform-origin:center;transition:transform .55s cubic-bezier(.22,.61,.36,1),filter .55s ease,box-shadow .55s ease;will-change:transform}.about-screen .image-card:hover{transform:scale(1.07);filter:brightness(1.08);box-shadow:0 .8vw 2.2vw rgba(255,255,255,.09)}
+.about-screen .card-row{display:flex!important;gap:1vw}.about-screen .image-card{flex:1 1 0;min-width:0;transform:none!important;transition:flex-grow .6s cubic-bezier(.22,.61,.36,1),filter .55s ease,box-shadow .55s ease}.about-screen .image-card:hover{flex-grow:1.3;filter:brightness(1.08);box-shadow:0 .8vw 2.2vw rgba(255,255,255,.09)}
+.about-screen .card-row{display:grid!important;grid-template-columns:repeat(8,1fr);gap:1vw}.about-screen .image-card{z-index:1;transform:scale(1)!important;transition:transform .82s cubic-bezier(.16,1,.3,1),filter .72s ease,box-shadow .72s ease;will-change:transform}.about-screen .image-card:hover{z-index:3;transform:scale(1.4)!important;filter:brightness(1.08);box-shadow:0 .8vw 2.2vw rgba(255,255,255,.12)}
+.image-card.has-image img{display:block;width:100%;height:100%;object-fit:cover;object-position:center}.image-card.is-empty{background:#c4c4c4}
+.case-gallery{width:91%;height:44.44vw;margin-top:.84vw;overflow-x:hidden;overflow-y:auto;overscroll-behavior:contain;border-radius:1.25vw;background:#f2f2f2;scroll-behavior:smooth;scroll-snap-type:y proximity;scrollbar-width:thin;scrollbar-color:#777 #202020}
+.case-gallery img{display:block;width:100%;height:auto;object-fit:contain;background:#fff;scroll-snap-align:start}
+.case-gallery::-webkit-scrollbar{width:.45vw}.case-gallery::-webkit-scrollbar-track{background:#202020}.case-gallery::-webkit-scrollbar-thumb{background:#777;border:.12vw solid #202020;border-radius:1vw}.case-gallery::-webkit-scrollbar-thumb:hover{background:#aaa}
+@media(max-width:800px){.case-gallery{width:91%;height:44.44vw}}
+.case-copy p{color:#666666}.case-copy p span{display:block;white-space:nowrap}
+.services-screen{grid-template-rows:1fr}.service-list{align-self:end;width:100%}.services-screen aside{position:relative}.services-screen aside small{position:absolute;left:0;bottom:10vw;margin:0}.services-screen aside .projects-title{position:absolute;left:0;bottom:2.25vw;margin:0;transform:none}
+.hero-screen .watch{right:4.5%;top:36.5%;width:12%;height:7.5%}
+.screen.page-entered{animation:page-arrival .82s cubic-bezier(.16,1,.3,1) both}
+@keyframes page-arrival{from{opacity:.2;transform:translateY(1.6vw)}to{opacity:1;transform:translateY(0)}}
+@media(prefers-reduced-motion:reduce){.screen.page-entered{animation:none}}
+
+/* Page-entry motion: each section reveals its content in reading order. */
+.about-screen.page-entered,
+#page-3.page-entered,
+.case-screen.page-entered,
+.hero-screen.page-entered,
+.finish-screen.page-entered{animation:none}
+
+.about-screen:not(.page-entered) .about-copy{opacity:0;transform:translateY(-4vw)}
+.about-screen.page-entered .about-copy{animation:about-copy-in .95s cubic-bezier(.16,1,.3,1) both}
+.about-screen:not(.page-entered) .image-card{opacity:0;left:var(--spread-x)}
+.about-screen.page-entered .image-card{animation:about-card-spread 1.05s cubic-bezier(.16,1,.3,1) both;animation-delay:var(--spread-delay)}
+.about-screen .image-card:nth-child(1){--spread-x:40vw;--spread-delay:.99s}
+.about-screen .image-card:nth-child(2){--spread-x:29vw;--spread-delay:.91s}
+.about-screen .image-card:nth-child(3){--spread-x:18vw;--spread-delay:.83s}
+.about-screen .image-card:nth-child(4){--spread-x:6vw;--spread-delay:.75s}
+.about-screen .image-card:nth-child(5){--spread-x:-6vw;--spread-delay:.75s}
+.about-screen .image-card:nth-child(6){--spread-x:-18vw;--spread-delay:.83s}
+.about-screen .image-card:nth-child(7){--spread-x:-29vw;--spread-delay:.91s}
+.about-screen .image-card:nth-child(8){--spread-x:-40vw;--spread-delay:.99s}
+@keyframes about-copy-in{from{opacity:0;transform:translateY(-4vw);filter:blur(.35vw)}to{opacity:1;transform:translateY(2.5vw);filter:blur(0)}}
+@keyframes about-card-spread{from{opacity:0;left:var(--spread-x)}to{opacity:1;left:0}}
+
+#page-3:not(.page-entered) aside,
+#page-3:not(.page-entered) .service-list article{opacity:0;transform:translateY(4vw)}
+#page-3.page-entered aside{animation:contents-rise .8s cubic-bezier(.16,1,.3,1) both}
+#page-3.page-entered .service-list article{animation:contents-rise .7s cubic-bezier(.16,1,.3,1) both}
+#page-3.page-entered .service-list article:nth-child(1){animation-delay:.14s}
+#page-3.page-entered .service-list article:nth-child(2){animation-delay:.2s}
+#page-3.page-entered .service-list article:nth-child(3){animation-delay:.26s}
+#page-3.page-entered .service-list article:nth-child(4){animation-delay:.32s}
+#page-3.page-entered .service-list article:nth-child(5){animation-delay:.38s}
+#page-3.page-entered .service-list article:nth-child(6){animation-delay:.44s}
+#page-3.page-entered .service-list article:nth-child(7){animation-delay:.5s}
+#page-3.page-entered .service-list article:nth-child(8){animation-delay:.56s}
+@keyframes contents-rise{from{opacity:0;transform:translateY(4vw)}to{opacity:1;transform:translateY(0)}}
+
+.case-screen:not(.page-entered) .case-side{opacity:0;transform:translateX(-4vw);clip-path:inset(0 100% 0 0);filter:blur(.3vw)}
+.case-screen:not(.page-entered) .case-gallery{opacity:0;transform:translateY(5vw)}
+.case-screen.page-entered .case-side{animation:case-copy-reveal .9s cubic-bezier(.16,1,.3,1) both}
+.case-screen.page-entered .case-gallery{animation:case-gallery-rise 1s cubic-bezier(.16,1,.3,1) .72s both}
+@keyframes case-copy-reveal{from{opacity:0;transform:translateX(-4vw);clip-path:inset(0 100% 0 0);filter:blur(.3vw)}to{opacity:1;transform:translateX(0);clip-path:inset(0 0 0 0);filter:blur(0)}}
+@keyframes case-gallery-rise{from{opacity:0;transform:translateY(5vw)}to{opacity:1;transform:translateY(0)}}
+
+.hero-screen:not(.page-entered) .hero-person-dark,
+.finish-screen:not(.page-entered) .finish-base{opacity:0;transform:scale(1.08);filter:grayscale(1) brightness(.35) blur(.55vw)}
+.hero-screen.page-entered .hero-person-dark{animation:hero-art-arrival 1.45s cubic-bezier(.16,1,.3,1) both}
+.finish-screen.page-entered .finish-base{animation:finish-art-arrival 1.55s cubic-bezier(.16,1,.3,1) both}
+@keyframes hero-art-arrival{0%{opacity:0;transform:scale(1.08);filter:grayscale(1) brightness(.35) blur(.55vw)}55%{opacity:1;filter:grayscale(.35) brightness(.75) blur(.08vw)}100%{opacity:1;transform:scale(1);filter:grayscale(0) brightness(1) blur(0)}}
+@keyframes finish-art-arrival{0%{opacity:0;transform:scale(.92);filter:grayscale(1) brightness(.3) blur(.6vw)}60%{opacity:1;transform:scale(1.025);filter:grayscale(.25) brightness(.82) blur(.08vw)}100%{opacity:1;transform:scale(1);filter:grayscale(0) brightness(1) blur(0)}}
+
+@media(prefers-reduced-motion:reduce){
+  .about-screen .about-copy,.about-screen .image-card,#page-3 aside,#page-3 .service-list article,.case-screen .case-side,.case-screen .case-gallery,.hero-screen .hero-person-dark,.finish-screen .finish-base{animation:none!important;opacity:1!important;transform:none!important;clip-path:none!important;filter:none!important;left:0!important}
+  .about-screen .about-copy{transform:translateY(2.5vw)!important}
+}
+
+/* Page 2 is a deliberate two-wheel sequence instead of an automatic entrance. */
+#page-2.page-entered{animation:none}
+#page-2 .about-copy{animation:none;transition:opacity 1.15s ease,transform 1.2s cubic-bezier(.16,1,.3,1),filter 1.15s ease;will-change:opacity,transform,filter}
+#page-2 .image-card{animation:none;will-change:left,opacity,transform}
+#page-2.about-stage-0 .about-copy{opacity:0;transform:translateY(18vw) scale(.96);filter:blur(.55vw)}
+#page-2.about-stage-1 .about-copy{opacity:1;transform:translateY(11vw) scale(1);filter:blur(0)}
+#page-2.about-stage-2 .about-copy{opacity:1;transform:translateY(2.5vw) scale(1);filter:blur(0)}
+#page-2.about-stage-0 .image-card,
+#page-2.about-stage-1 .image-card{opacity:0;left:var(--spread-x)}
+#page-2.about-stage-2 .image-card{animation:about-card-spread 1.15s cubic-bezier(.16,1,.3,1) both;animation-delay:var(--spread-delay)}
+
+/* Pages 3 and 4 share the same upward directory entrance, but not click state. */
+#page-4.page-entered{animation:none}
+#page-4:not(.page-entered) aside,
+#page-4:not(.page-entered) .service-list article{opacity:0;transform:translateY(4vw)}
+#page-4.page-entered aside{animation:contents-rise .8s cubic-bezier(.16,1,.3,1) both}
+#page-4.page-entered .service-list article{animation:contents-rise .7s cubic-bezier(.16,1,.3,1) both}
+#page-4.page-entered .service-list article:nth-child(1){animation-delay:.14s}
+#page-4.page-entered .service-list article:nth-child(2){animation-delay:.2s}
+#page-4.page-entered .service-list article:nth-child(3){animation-delay:.26s}
+#page-4.page-entered .service-list article:nth-child(4){animation-delay:.32s}
+#page-4.page-entered .service-list article:nth-child(5){animation-delay:.38s}
+#page-4.page-entered .service-list article:nth-child(6){animation-delay:.44s}
+#page-4.page-entered .service-list article:nth-child(7){animation-delay:.5s}
+#page-4.page-entered .service-list article:nth-child(8){animation-delay:.56s}
+
+@media(prefers-reduced-motion:reduce){
+  #page-2 .about-copy,#page-2 .image-card,#page-4 aside,#page-4 .service-list article{animation:none!important;opacity:1!important;filter:none!important;left:0!important}
+  #page-2 .about-copy{transform:translateY(2.5vw)!important}
+  #page-4 aside,#page-4 .service-list article{transform:none!important}
+}
+
+/* Trigger the two directories only when each page reaches the viewport centre. */
+:is(#page-3,#page-4).services-screen aside{animation:none!important;opacity:1!important;transform:none!important}
+:is(#page-3,#page-4).services-screen:not(.directory-entered) .service-list article{animation:none;opacity:0;transform:translateY(5vw)}
+:is(#page-3,#page-4).services-screen.directory-entered .service-list article{animation:directory-rise .82s cubic-bezier(.16,1,.3,1) both}
+:is(#page-3,#page-4).services-screen.directory-entered .service-list article:nth-child(1){animation-delay:.08s}
+:is(#page-3,#page-4).services-screen.directory-entered .service-list article:nth-child(2){animation-delay:.14s}
+:is(#page-3,#page-4).services-screen.directory-entered .service-list article:nth-child(3){animation-delay:.2s}
+:is(#page-3,#page-4).services-screen.directory-entered .service-list article:nth-child(4){animation-delay:.26s}
+:is(#page-3,#page-4).services-screen.directory-entered .service-list article:nth-child(5){animation-delay:.32s}
+:is(#page-3,#page-4).services-screen.directory-entered .service-list article:nth-child(6){animation-delay:.38s}
+:is(#page-3,#page-4).services-screen.directory-entered .service-list article:nth-child(7){animation-delay:.44s}
+:is(#page-3,#page-4).services-screen.directory-entered .service-list article:nth-child(8){animation-delay:.5s}
+@keyframes directory-rise{from{opacity:0;transform:translateY(5vw)}to{opacity:1;transform:translateY(0)}}
+
+@media(prefers-reduced-motion:reduce){
+  :is(#page-3,#page-4).services-screen .service-list article{animation:none!important;opacity:1!important;transform:none!important}
+}
+
+/* The inserted About AI page keeps the About Me typography, centred as pure copy. */
+.ai-screen{justify-content:center;padding:0 5.2vw}
+.ai-screen .ai-copy{margin:0;transform:none}
+.ai-screen .ai-copy h2,
+.ai-screen .ai-copy h3{color:#fff}
+.ai-screen .ai-copy p{margin:2.4vh 0 0}
+.ai-screen .ai-copy p span{display:block}
+.ai-screen:not(.page-entered) .ai-copy{opacity:0;transform:translateY(5vw);filter:blur(.35vw)}
+.ai-screen.page-entered .ai-copy{animation:ai-copy-rise 1.05s cubic-bezier(.16,1,.3,1) both}
+@keyframes ai-copy-rise{from{opacity:0;transform:translateY(5vw);filter:blur(.35vw)}to{opacity:1;transform:translateY(0);filter:blur(0)}}
+
+/* The two directory pages moved to pages 4 and 5 after inserting About AI. */
+:is(#page-4,#page-5).services-screen.page-entered{animation:none}
+:is(#page-4,#page-5).services-screen aside{animation:none!important;opacity:1!important;transform:none!important}
+:is(#page-4,#page-5).services-screen:not(.directory-entered) .service-list article{animation:none;opacity:0;transform:translateY(5vw)}
+:is(#page-4,#page-5).services-screen.directory-entered .service-list article{animation:directory-rise .82s cubic-bezier(.16,1,.3,1) both}
+:is(#page-4,#page-5).services-screen.directory-entered .service-list article:nth-child(1){animation-delay:.08s}
+:is(#page-4,#page-5).services-screen.directory-entered .service-list article:nth-child(2){animation-delay:.14s}
+:is(#page-4,#page-5).services-screen.directory-entered .service-list article:nth-child(3){animation-delay:.2s}
+:is(#page-4,#page-5).services-screen.directory-entered .service-list article:nth-child(4){animation-delay:.26s}
+:is(#page-4,#page-5).services-screen.directory-entered .service-list article:nth-child(5){animation-delay:.32s}
+:is(#page-4,#page-5).services-screen.directory-entered .service-list article:nth-child(6){animation-delay:.38s}
+:is(#page-4,#page-5).services-screen.directory-entered .service-list article:nth-child(7){animation-delay:.44s}
+:is(#page-4,#page-5).services-screen.directory-entered .service-list article:nth-child(8){animation-delay:.5s}
+
+@media(prefers-reduced-motion:reduce){
+  .ai-screen .ai-copy,
+  :is(#page-4,#page-5).services-screen .service-list article{animation:none!important;opacity:1!important;transform:none!important;filter:none!important}
+}
