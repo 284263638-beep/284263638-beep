@@ -34,6 +34,7 @@
 - Project-card thumbnails use each gallery's first work image, except project 01 and project 08 retain their existing thumbnails and project 07 uses its fourth work image. Card number and project name stay on one line.
 - All eight project-card thumbnail images are shifted upward by exactly 5px inside their existing media containers.
 - The final image in project 04 uses the latest supplied 1x `/07_界面展示` artboard.
+- All production images and videos committed for deployment must retain their supplied native files and full pixel dimensions. Do not resize, recompress, transcode, or lower quality for GitHub or deployment; the built `dist/client` media must remain byte-identical to its corresponding public source.
 
 Run the local server yourself and open the preview in the browser available to this environment. Do not give the user server-start instructions when you can run it.
 
